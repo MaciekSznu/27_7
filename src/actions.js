@@ -50,7 +50,6 @@ export function thumbDownComment(id, thumbsDown) {
   return {
     type: THUMB_DOWN_COMMENT,
     id,
-    thumbsDown: ++thumbsDown,
   }
 };
 
