@@ -37,11 +37,10 @@ export function removeComment(id) {
 
 // const boundRemoveComment = id => dispatch(removeComment(id));
 
-export function thumbUpComment(id, thumbsUp) {
+export function thumbUpComment(id) {
   return {
     type: THUMB_UP_COMMENT,
     id,
-    thumbsUp: ++thumbsUp,
   }
 };
 

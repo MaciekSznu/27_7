@@ -24,19 +24,13 @@ function comments(state = [], action) {
       };
 
     case EDIT_COMMENT:
-      return {
-        comments: state.comments.map(comment => comment.id === action.id ? comment.text = action.text : comment)
-      };
+      return state.map(comment => comment.id === action.id ? {...comment, text: action.text} : comment);
 
     case THUMB_UP_COMMENT:
-      return {
-        comments: state.comments.map(comment => comment.id === action.id ? comment.votes = ++comment.votes : comment)
-      };
+      return state.map(comment => comment.id === action.id ? {...comment, votes: ++comment.votes} : comment);
 
     case THUMB_DOWN_COMMENT:
-      return {
-        comments: state.comments.map(comment => comment.id === action.id ? comment.votes = --comment.votes : comment)
-      };
+      return state.map(comment => comment.id === action.id ? {...comment, votes: --comment.votes} : comment);
 
     default:
       return state;
