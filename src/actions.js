@@ -46,7 +46,7 @@ export function thumbUpComment(id) {
 
 // const boundThumbUpComment = (id, thumbsUp) => dispatch(thumbUpComment(id, thumbsUp));
 
-export function thumbDownComment(id, thumbsDown) {
+export function thumbDownComment(id) {
   return {
     type: THUMB_DOWN_COMMENT,
     id,
