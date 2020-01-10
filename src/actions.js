@@ -18,7 +18,8 @@ export function addComment(text) {
 // funkcja tworząca i wysyłająca akcję za pomoca metody dispatch
 // const boundAddComment = text => dispatch(addComment(text));
 
-export function editComment(text, id) {
+export function editComment(id, text) {
+  console.log('editComment executed');
   return {
     type: EDIT_COMMENT,
     text,

@@ -22,6 +22,8 @@ function comments(state = [], action) {
       return state.filter(comment => comment.id !== action.id);
 
     case EDIT_COMMENT:
+      console.log(action.id);
+      console.log(action.text);
       return state.map(comment => comment.id === action.id ? {...comment, text: action.text} : comment);
 
     case THUMB_UP_COMMENT:
