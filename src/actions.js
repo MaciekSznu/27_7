@@ -22,8 +22,8 @@ export function editComment(id, text) {
   console.log('editComment executed');
   return {
     type: EDIT_COMMENT,
-    text,
     id,
+    text,
   }
 };
 

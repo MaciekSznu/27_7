@@ -7,6 +7,7 @@ const confirmation = () => {
   console.log(text);
   return text;
 }
+
 const Comment = ({text, votes, id, thumbUpComment, thumbDownComment, removeComment, editComment}) =>
   <li>
     {text} <span>votes: {votes}</span>
