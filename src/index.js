@@ -4,15 +4,14 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import { createLogger } from 'redux-logger';
+import { createStore, combineReducers } from 'redux';
 import { reducer } from './reducer';
 import { addComment } from './actions';
+import DevTools from './DevTools';
 
 
-const logger = createLogger();
-// zmienna z przypisanym store aplikacji z dodanym loggerem
-const store = createStore(reducer, applyMiddleware(logger));
+// zmienna z przypisanym store aplikacji z dodanym devTools
+const store = createStore(reducer, DevTools.instrument());
 
 ReactDOM.render(
   <Provider store={store}>

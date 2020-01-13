@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import CommentsListContainer from './CommentsListContainer';
 import NewCommentInput from './NewComment';
+import DevTools from './DevTools';
 
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
       <CommentsListContainer />
       <h2>Add new Comment</h2>
       <NewCommentInput />
+      <DevTools />
     </div>
   );
 };
