@@ -1,7 +1,5 @@
 import React from 'react'
 
-// const Comment = ({text, votes}) => <li>{text} <span>votes: {votes}</span></li>;
-
 const confirmation = () => {
   const text = prompt('Write new comment text below');
   console.log(text);

@@ -15,9 +15,6 @@ export function addComment(text) {
   }
 };
 
-// funkcja tworząca i wysyłająca akcję za pomoca metody dispatch
-// const boundAddComment = text => dispatch(addComment(text));
-
 export function editComment(id, text) {
   console.log('editComment executed');
   return {
@@ -27,16 +24,12 @@ export function editComment(id, text) {
   }
 };
 
-// const boundEditComment = (text, id) => dispatch(editComment(text, id));
-
 export function removeComment(id) {
   return {
     type: REMOVE_COMMENT,
     id,
   }
 };
-
-// const boundRemoveComment = id => dispatch(removeComment(id));
 
 export function thumbUpComment(id) {
   return {
@@ -45,13 +38,9 @@ export function thumbUpComment(id) {
   }
 };
 
-// const boundThumbUpComment = (id, thumbsUp) => dispatch(thumbUpComment(id, thumbsUp));
-
 export function thumbDownComment(id) {
   return {
     type: THUMB_DOWN_COMMENT,
     id,
   }
 };
-
-// const boundThumbDownComment = (id, thumbsDown) => dispatch(thumbDownComment(id, thumbsDown));
