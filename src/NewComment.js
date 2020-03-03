@@ -1,6 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addComment } from './actions';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import './NewComment.scss';
 
 const mapDispatchToProps = dispatch => ({
   addComment: (text) => dispatch(addComment(text))
@@ -29,15 +32,16 @@ class NewCommentInput extends React.Component {
 
   render() {
     return(
-      <form onSubmit = {(e) => this.handleSubmit(e)}>
-        <textarea
-          value = { this.state.text }
-          onChange = {(e) => this.handleChange(e)}
-          rows = '5'
-          cols = '60'
-        />
-        <button type='submit'>Add Comment</button>
-      </form>
+      <div className="AddCommentWrapper">
+        <form className="AddCommentForm" onSubmit = {(e) => this.handleSubmit(e)}>
+          <textarea className="AddCommentTextArea"
+            placeholder = 'New comment here!'
+            value = { this.state.text }
+            onChange = {(e) => this.handleChange(e)}
+          />
+          <button className="AddCommentButton" type='submit'><FontAwesomeIcon icon={faPlus} /></button>
+        </form>
+      </div>
     );
   }
 }

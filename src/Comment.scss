@@ -1,0 +1,73 @@
+.CommentBox {
+  width: 300px;
+  min-height: 140px;
+  padding: 16px;
+  margin: 8px;
+  border-radius: 42px;
+  background: linear-gradient(145deg, #ffffff, #d9e1e5);
+  box-shadow:  25px 25px 50px #a9afb2,
+              -25px -25px 50px #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .CommentText {
+    padding: inherit;
+    margin: 0;
+    word-break: break-all;
+  }
+
+  .CommentActionsWrapper {
+    padding: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .CommentVotes {
+      text-transform: uppercase;
+      //padding: 1px 6px;
+      font-size: 12px;
+      width: 90px;
+      height: 30px;
+      line-height: 30px;
+      //margin: 0 16px;
+      border-radius: 10px;
+      background: #f1fafe;
+      box-shadow: inset 3px 3px 6px #cdd5d8,
+                  inset -3px -3px 6px #ffffff;
+    }
+
+    .VoteButton, .ActionButton {
+      width: 30px;
+      height: 30px;
+      //margin: 0 12px;
+      font-size: 12px;
+      border: none;
+      border-radius: 50%;
+      background: #f1fafe;
+      box-shadow:  8px 8px 12px #bcc3c6,
+                  -8px -8px 12px #ffffff;
+
+      &:hover {
+        background: linear-gradient(145deg, #ffffff, #d9e1e5);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .ActionButton {
+      color: #5c6061;
+    }
+
+    .Plus {
+      color: green;
+    }
+
+    .Minus {
+      color: red;
+    }
+  }
+}
