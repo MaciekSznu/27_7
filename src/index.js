@@ -19,6 +19,6 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-store.dispatch(addComment('pierwszy komentarz'));
-store.dispatch(addComment('drugi komentarz'));
+store.dispatch(addComment(`It's a very nice comment.`));
+store.dispatch(addComment(`What a brilliant idea!`));
 
