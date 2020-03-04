@@ -1,9 +1,7 @@
 import React from 'react';
 import './App.scss';
-import CommentsListContainer from './CommentsListContainer';
-import NewCommentInput from './NewComment';
-import DevTools from './DevTools';
-
+import CommentsListContainer from './CommentsList/CommentsListContainer';
+import NewCommentInput from './NewComment/NewComment';
 
 const App = () => {
   return (
@@ -12,7 +10,6 @@ const App = () => {
       <CommentsListContainer />
       <h2 className="FormTitle">Add new Comment</h2>
       <NewCommentInput />
-      <DevTools />
     </div>
   );
 };
